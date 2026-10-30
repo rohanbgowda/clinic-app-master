@@ -8,7 +8,7 @@ import AppointmentForm from "../components/AppointmentForm";
 // Example from unsplash: "https://images.unsplash.com/photo-1551191834-6e1b9b2a5c96?q=80&w=1740"
 const HERO_IMAGE_URL = "https://images.unsplash.com/photo-1538108149393-fbbd81895907?q=80&w=1856";
 
-const API_URL = "http://localhost:5000/api";
+const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000/api";
 
 export default function Home() {
   const [doctors, setDoctors] = useState([]);

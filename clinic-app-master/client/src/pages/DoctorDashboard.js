@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import PrescriptionForm from '../components/PrescriptionForm';
 import BillForm from '../components/BillForm';
 
-const API_URL = "http://localhost:5000/api";
+const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000/api";
 
 export default function DoctorDashboard() {
   const [appointments, setAppointments] = useState([]);

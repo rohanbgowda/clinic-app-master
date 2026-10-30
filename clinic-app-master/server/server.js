@@ -14,7 +14,12 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
-app.use(cors({ origin: "http://localhost:3000" }));
+app.use(cors({
+  origin: [
+    "http://localhost:3000",
+    "https://clinic-app-master.vercel.app"
+  ]
+}));
 app.use(express.json()); // To parse JSON bodies
 
 // Connect to MongoDB

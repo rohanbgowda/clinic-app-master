@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const API_URL = "http://localhost:5000/api";
+const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000/api";
 
 export default function PrescriptionForm({ appointment, token, onClose }) {
   const [medication, setMedication] = useState('');

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
 
-const API_URL = "http://localhost:5000/api";
+const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000/api";
 
 export default function AppointmentForm({ doctors, selectedDoctor, setSelectedDoctor, time, setTime, availableSlots }) {
   const [date, setDate] = useState("");
